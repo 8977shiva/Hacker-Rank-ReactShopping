@@ -1,0 +1,17 @@
+                    <button
+                    onClick={() => this.renderAddToCart(i)}
+                    className="x-small outlined"
+                    data-testid="btn-item-add"
+                  >
+                    Add To Cart
+                  </button>}
+
+                  <button
+                    className="x-small danger"
+                    data-testid="btn-item-remove"
+                    onClick={()=>this.props.removeFromCart(i)}
+                  >
+                    Remove
+                  </button>
+
+                  {!this.state.showAdd && this.state.setindex===i ? this.renderRemovebtn(i):this.renderAddToCart(i)}
